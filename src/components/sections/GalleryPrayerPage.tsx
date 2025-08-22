@@ -63,7 +63,7 @@ export const GalleryPrayerPage: React.FC<GalleryPrayerPageProps> = ({
           className="mb-3"
         >
           <p
-            className="text-lg md:text-base text-[#504B38] leading-relaxed"
+            className="text-[#504B38] text-base md:text-base leading-relaxed mb-6 max-w-2xl mx-6 sm:mx-10 md:mx-auto px-0"
             style={{
               fontFamily: "var(--font-inter), sans-serif",
               fontWeight: 400,
@@ -101,7 +101,7 @@ export const GalleryPrayerPage: React.FC<GalleryPrayerPageProps> = ({
           className="mt-3"
         >
           <span
-            className="text-[#504B38] font-bold"
+            className="text-[#504B38] text-base md:text-base leading-relaxed mb-12 max-w-2xl mx-6 sm:mx-10 md:mx-auto px-0 font-bold"
             style={{ fontFamily: "var(--font-inter), sans-serif" }}
           >
             (QS AR-RUM : 21 )

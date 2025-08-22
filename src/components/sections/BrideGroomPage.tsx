@@ -28,7 +28,7 @@ export const BrideGroomPage: React.FC<BrideGroomPageProps> = ({
           <AnimatedElement animationType="scale" delay={200}>
             <div className="flex justify-center mb-4">
               <Image
-                src="/arab.png"
+                src="/bride-groom/arab2.png"
                 alt="Bismillah"
                 width={300}
                 height={40}
@@ -53,7 +53,7 @@ export const BrideGroomPage: React.FC<BrideGroomPageProps> = ({
           {/* Opening Statement */}
           <AnimatedElement animationType="slide" delay={300}>
             <p
-              className="text-center text-base md:text-lg mb-6"
+              className="text-[#504B38] text-base md:text-base leading-relaxed mb-12 max-w-2xl mx-6 sm:mx-10 md:mx-auto px-0"
               style={{
                 fontFamily: "var(--font-inter), sans-serif",
                 color: "#504B38",

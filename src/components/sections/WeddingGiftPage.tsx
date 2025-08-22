@@ -22,7 +22,7 @@ export const WeddingGiftPage: React.FC<WeddingGiftPageProps> = ({
   return (
     <div
       id="wedding-gift-page"
-      className="min-h-screen bg-white flex items-center justify-center p-8 animate-fadeIn relative"
+      className="min-h-screen bg-white flex items-center justify-center p-8 animate-fadeIn relative -mt-8 z-[20]"
     >
       {/* Background Texture */}
       <div className="absolute inset-0 z-0">
@@ -39,7 +39,7 @@ export const WeddingGiftPage: React.FC<WeddingGiftPageProps> = ({
         {/* Wedding Gift Title */}
         <AnimatedElement animationType="slide" delay={200}>
           <h1
-            className="text-4xl md:text-5xl text-[#504B38] mb-12"
+            className="text-4xl md:text-5xl text-[#504B38] mb-4"
             style={{
               fontFamily: '"Times New Roman", Times, serif',
               fontWeight: 600,
@@ -53,7 +53,7 @@ export const WeddingGiftPage: React.FC<WeddingGiftPageProps> = ({
         {/* Description Text */}
         <AnimatedElement animationType="slide" delay={400}>
           <p
-            className="text-[#504B38] text-base md:text-lg leading-relaxed mb-12 max-w-lg mx-auto"
+            className="text-[#504B38] text-base md:text-base leading-relaxed mb-12 max-w-2xl mx-6 sm:mx-10 md:mx-auto px-0"
             style={{
               fontFamily:
                 "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
@@ -240,114 +240,6 @@ export const WeddingGiftPage: React.FC<WeddingGiftPageProps> = ({
                             "Nomor rekening Mandiri disalin",
                             "success"
                           );
-                        }}
-                      >
-                        Copy
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* E-Wallet Section */}
-              <div>
-                <h3
-                  className="text-xl font-semibold text-[#504B38] mb-4"
-                  style={{ fontFamily: '"Times New Roman", Times, serif' }}
-                >
-                  E-Wallet
-                </h3>
-
-                <div className="space-y-4">
-                  {/* GoPay */}
-                  <div className="bg-[#F5E6D3]/50 rounded-[15px] p-4">
-                    <div className="flex justify-between items-center">
-                      <div className="text-left">
-                        <p
-                          className="text-sm text-[#504B38]/70 mb-1"
-                          style={{
-                            fontFamily:
-                              "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
-                          }}
-                        >
-                          GoPay
-                        </p>
-                        <p
-                          className="text-lg font-semibold text-[#504B38]"
-                          style={{
-                            fontFamily:
-                              "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
-                          }}
-                        >
-                          081234567890
-                        </p>
-                        <p
-                          className="text-sm text-[#504B38]"
-                          style={{
-                            fontFamily:
-                              "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
-                          }}
-                        >
-                          a.n. Tania Subyanto
-                        </p>
-                      </div>
-                      <button
-                        className="px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-300 border border-[#504B38] text-[#504B38] hover:bg-[#504B38] hover:text-white"
-                        style={{
-                          fontFamily:
-                            "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
-                        }}
-                        onClick={() => {
-                          navigator.clipboard.writeText("081234567890");
-                          showToast("Nomor GoPay disalin", "success");
-                        }}
-                      >
-                        Copy
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* OVO */}
-                  <div className="bg-[#F5E6D3]/50 rounded-[15px] p-4">
-                    <div className="flex justify-between items-center">
-                      <div className="text-left">
-                        <p
-                          className="text-sm text-[#504B38]/70 mb-1"
-                          style={{
-                            fontFamily:
-                              "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
-                          }}
-                        >
-                          OVO
-                        </p>
-                        <p
-                          className="text-lg font-semibold text-[#504B38]"
-                          style={{
-                            fontFamily:
-                              "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
-                          }}
-                        >
-                          081098765432
-                        </p>
-                        <p
-                          className="text-sm text-[#504B38]"
-                          style={{
-                            fontFamily:
-                              "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
-                          }}
-                        >
-                          a.n. Doni Supratman
-                        </p>
-                      </div>
-                      <button
-                        className="px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-300 border border-[#504B38] text-[#504B38] hover:bg-[#504B38] hover:text-white"
-                        style={{
-                          fontFamily:
-                            "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
-                        }}
-                        onClick={() => {
-                          navigator.clipboard.writeText("081098765432");
-                          showToast("Nomor OVO disalin", "success");
                         }}
                       >
                         Copy

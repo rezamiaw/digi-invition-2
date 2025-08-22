@@ -22,7 +22,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   onOpenInvitation,
 }) => {
   return (
-    <div className="bg-white min-h-screen overflow-hidden relative">
+    <div className="bg-white min-h-screen overflow-x-hidden relative">
       {/* Background Texture */}
       <div className="absolute inset-0 z-0">
         <Image

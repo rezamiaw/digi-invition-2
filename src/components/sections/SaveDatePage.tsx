@@ -49,7 +49,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
       <div className="w-full h-full flex items-center justify-center">
         <AnimatedText animationType="scale" delay={0.3} duration={1.2}>
           <h1
-            className="text-5xl md:text-5xl tracking-wide"
+            className="text-3xl md:text-4xl tracking-wide"
             style={{
               fontFamily: '"Times New Roman", Times, serif',
               color: "#504B38",
@@ -88,7 +88,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
           duration={1.0}
           className="mb-2"
         >
-          <div className="text-2xl">Sabtu,</div>
+          <div className="text-lg md:text-xl">Sabtu,</div>
         </AnimatedText>
         <AnimatedText
           animationType="slideUp"
@@ -96,7 +96,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
           duration={1.0}
           className="mb-6"
         >
-          <div className="text-2xl">15 November 2025</div>
+          <div className="text-lg md:text-xl">15 November 2025</div>
         </AnimatedText>
 
         {/* Reception Time */}
@@ -106,7 +106,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
           duration={1.0}
           className="mb-2"
         >
-          <div className="italic text-2xl">Resepsi</div>
+          <div className="italic text-lg md:text-xl">Resepsi</div>
         </AnimatedText>
         <AnimatedText
           animationType="slideLeft"
@@ -114,7 +114,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
           duration={1.0}
           className="mb-1"
         >
-          <div className="text-2xl font-extrabold">13.00 - 17.00</div>
+          <div className="text-lg md:text-xl font-extrabold">13.00 - 17.00</div>
         </AnimatedText>
         <AnimatedText
           animationType="slideLeft"
@@ -122,7 +122,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
           duration={1.0}
           className="mb-8"
         >
-          <div className="text-base opacity-80">
+          <div className="text-xs md:text-sm opacity-80">
             ( di buka dengan tampilan adat sunda )
           </div>
         </AnimatedText>
@@ -134,7 +134,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
           duration={1.0}
           className="mb-2"
         >
-          <div className="text-2xl">Berlokasi di :</div>
+          <div className="text-lg md:text-xl">Berlokasi di :</div>
         </AnimatedText>
         <AnimatedText
           animationType="slideRight"
@@ -142,7 +142,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
           duration={1.0}
           className="mb-2"
         >
-          <div className="text-2xl font-extrabold">The Park View</div>
+          <div className="text-lg md:text-xl font-extrabold">The Park View</div>
         </AnimatedText>
         <AnimatedText
           animationType="slideRight"
@@ -150,7 +150,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
           duration={1.0}
           className="mb-6"
         >
-          <div className="text-lg leading-relaxed">
+          <div className="text-sm md:text-base leading-relaxed">
             Kb. Lega, Kec. Bojongloa Kidul,
             <br />
             Kota Bandung, Jawa Barat
@@ -160,9 +160,14 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
         {/* Button */}
         <AnimatedElement animationType="bounce" delay={1.8}>
           <div className="flex justify-center mb-10">
-            <button className="px-6 py-3 rounded-xl border border-[#504B38] text-[#504B38] tracking-[0.3em] text-base hover:bg-[#504B38] hover:text-white transition-colors">
+            <a
+              href="https://www.google.com/maps/place/The+Parkview/@-6.9499443,107.5957855,1126m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2e68e9e606eb9949:0x22a24f8ed88e0096!8m2!3d-6.9499496!4d107.5983604!16s%2Fg%2F11ss7kx405?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl border border-[#504B38] text-[#504B38] tracking-[0.3em] text-base hover:bg-[#504B38] hover:text-white transition-colors cursor-pointer"
+            >
               LIHAT LOKASI
-            </button>
+            </a>
           </div>
         </AnimatedElement>
 
@@ -185,7 +190,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
                   animationType="bounce"
                   delay={2.3 + idx * 0.1}
                   duration={0.8}
-                  className="text-5xl"
+                  className="text-3xl md:text-4xl"
                 >
                   <div>0</div>
                 </AnimatedText>
