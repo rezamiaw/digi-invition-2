@@ -94,9 +94,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             delay={b.delay}
             duration={b.duration}
             className={`absolute ${b.rotate}`}
-            // inline styles for positioning percentages
-            // eslint-disable-next-line react/no-unknown-property
-            style={{ left: b.left as any, top: b.top as any } as any}
+            style={{ left: b.left, top: b.top } as React.CSSProperties}
           />
         ))}
       </div>

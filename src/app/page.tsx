@@ -17,7 +17,6 @@ import { useInvitation } from "@/hooks/useInvitation";
 
 export default function Home() {
   const {
-    isInvitationOpen,
     isBrideGroomPageOpen,
     isGalleryPrayerPageOpen,
     isOurGalleryPageOpen,

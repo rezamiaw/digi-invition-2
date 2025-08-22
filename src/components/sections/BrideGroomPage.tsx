@@ -46,7 +46,7 @@ export const BrideGroomPage: React.FC<BrideGroomPageProps> = ({
                 color: "#504B38",
               }}
             >
-              Assalamu'alaikum Wr. Wb.
+              Assalamu&apos;alaikum Wr. Wb.
             </p>
           </AnimatedElement>
 
