@@ -28,7 +28,7 @@ export const RSVPPage: React.FC<RSVPPageProps> = ({ isVisible }) => {
       id="rsvp-page"
       className="min-h-s bg-[#F2E8C5] flex items-center justify-center p-8 animate-fadeIn relative"
     >
-      <div className="max-w-2xl w-full mx-auto text-center relative z-10 px-8">
+      <div className="max-w-7xl w-full mx-auto text-center relative z-10 px-0 sm:px-8">
         {/* RSVP Title */}
         <AnimatedElement animationType="slide" delay={200}>
           <h1
