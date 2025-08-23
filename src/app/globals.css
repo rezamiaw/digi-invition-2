@@ -649,11 +649,47 @@ main {
 @keyframes textSlideRight {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-30px) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) translateZ(0);
+  }
+}
+
+/* Safari iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .animate-text-slideRight {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+  }
+
+  /* Ensure proper rendering on iOS */
+  .animate-text-slideRight.animate-visible {
+    -webkit-transform: translateX(0) translateZ(0);
+    transform: translateX(0) translateZ(0);
+  }
+
+  /* Fix for iOS Safari clipping issues */
+  .animate-text-slideLeft,
+  .animate-text-slideRight,
+  .animate-text-bounce {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  /* Ensure proper stacking context on iOS */
+  [style*="z-index: 25"] {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 }
 

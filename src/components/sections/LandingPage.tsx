@@ -286,8 +286,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       </div>
 
       {/* C&R Text with Button */}
-      <div className="absolute inset-0 flex items-center justify-center z-20 px-4">
-        <div className="text-center flex flex-col items-center justify-center w-full max-w-md md:max-w-none">
+      <div className="absolute inset-0 flex items-center justify-center z-20 px-4 overflow-visible">
+        <div className="text-center flex flex-col items-center justify-center w-full max-w-md md:max-w-none overflow-visible">
           <AnimatedText
             animationType="slideDown"
             delay={0.2}
@@ -309,14 +309,19 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             className="mb-8 md:mb-12"
           >
             <h1
-              className="text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-bold text-[#504B38] drop-shadow-lg tracking-tight flex items-center justify-center"
+              className="text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-bold text-[#504B38] drop-shadow-lg tracking-tight flex items-center justify-center overflow-visible"
               style={{ fontFamily: "Kunstler, serif" }}
             >
               <AnimatedText
                 animationType="slideLeft"
                 delay={1.2}
                 duration={1.0}
-                className={`${alexBrush.className} relative -top-3 sm:-top-3 md:-top-4`}
+                className={`${alexBrush.className} relative -top-3 sm:-top-3 md:-top-4 overflow-visible`}
+                style={{
+                  zIndex: 25,
+                  transform: "translateZ(0)",
+                  WebkitTransform: "translateZ(0)",
+                }}
               >
                 C
               </AnimatedText>
@@ -324,7 +329,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 animationType="bounce"
                 delay={1.4}
                 duration={0.8}
-                className="mx-1"
+                className="mx-1 overflow-visible"
+                style={{
+                  zIndex: 25,
+                  transform: "translateZ(0)",
+                  WebkitTransform: "translateZ(0)",
+                }}
               >
                 &
               </AnimatedText>
@@ -332,7 +342,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 animationType="slideRight"
                 delay={1.6}
                 duration={1.0}
-                className={`${alexBrush.className} relative top-10 sm:top-12 md:top-16 lg:top-20`}
+                className={`${alexBrush.className} relative top-8 sm:top-10 md:top-12 lg:top-16 overflow-visible`}
+                style={{
+                  zIndex: 25,
+                  transform: "translateZ(0)", // Force hardware acceleration on iOS
+                  WebkitTransform: "translateZ(0)", // Safari specific
+                }}
               >
                 R
               </AnimatedText>

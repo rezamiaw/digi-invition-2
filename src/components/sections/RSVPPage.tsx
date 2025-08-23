@@ -26,7 +26,7 @@ export const RSVPPage: React.FC<RSVPPageProps> = ({ isVisible }) => {
   return (
     <div
       id="rsvp-page"
-      className="min-h-screen bg-[#F2E8C5] flex items-center justify-center p-8 animate-fadeIn relative"
+      className="min-h-s bg-[#F2E8C5] flex items-center justify-center p-8 animate-fadeIn relative"
     >
       <div className="max-w-2xl w-full mx-auto text-center relative z-10 px-8">
         {/* RSVP Title */}
@@ -55,7 +55,7 @@ export const RSVPPage: React.FC<RSVPPageProps> = ({ isVisible }) => {
         {/* Description Text */}
         <AnimatedElement animationType="slide" delay={400}>
           <p
-            className="text-[#504B38] text-base md:text-lg leading-relaxed mb-12 max-w-4xl mx-6 sm:mx-10 md:mx-auto px-0"
+            className="text-[#504B38] text-base md:text-lg leading-relaxed mb-12 max-w-7xl mx-1 sm:mx-8 md:mx-auto px-0"
             style={{
               fontFamily:
                 "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
