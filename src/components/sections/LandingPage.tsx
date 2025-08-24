@@ -322,7 +322,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 animationType="slideLeft"
                 delay={1.2}
                 duration={1.0}
-                className={`${alexBrush.className} overflow-visible -translate-y-1 sm:-translate-y-1 md:-translate-y-2`}
+                className={`overflow-visible -translate-y-1 sm:-translate-y-1 md:-translate-y-2`}
+                style={{
+                  fontFamily: "Kunstler, serif",
+                  WebkitFontSmoothing: "antialiased",
+                  MozOsxFontSmoothing: "grayscale",
+                }}
               >
                 C
               </AnimatedText>
@@ -340,7 +345,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 animationType="slideLeft"
                 delay={1.6}
                 duration={1.0}
-                className={`${alexBrush.className} overflow-visible translate-y-10 sm:translate-y-12 md:translate-y-16 lg:translate-y-20`}
+                className={`overflow-visible translate-y-10 sm:translate-y-12 md:translate-y-16 lg:translate-y-20`}
+                style={{
+                  fontFamily: "Kunstler, serif",
+                  WebkitFontSmoothing: "antialiased",
+                  MozOsxFontSmoothing: "grayscale",
+                }}
               >
                 R
               </AnimatedText>
