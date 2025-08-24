@@ -53,7 +53,7 @@ export const WeddingGiftPage: React.FC<WeddingGiftPageProps> = ({
         {/* Description Text */}
         <AnimatedElement animationType="slide" delay={400}>
           <p
-            className="text-[#504B38] text-base md:text-base leading-relaxed mb-12 max-w-2xl mx-6 sm:mx-10 md:mx-auto px-0"
+            className="text-[#504B38] text-base md:text-lg leading-relaxed mb-12 max-w-7xl mx-1 sm:mx-8 md:mx-auto px-0"
             style={{
               fontFamily:
                 "var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, sans-serif",

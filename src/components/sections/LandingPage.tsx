@@ -302,29 +302,24 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             </h2>
           </AnimatedText>
 
-          <AnimatedText
-            animationType="scale"
-            delay={0.8}
-            duration={1.5}
-            className="mb-8 md:mb-12"
-          >
+          <div className="mb-8 md:mb-12">
             <h1
               className="text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-bold text-[#504B38] drop-shadow-lg tracking-tight flex items-center justify-center"
               style={{ fontFamily: "Kunstler, serif" }}
             >
-              <span
+              <div
                 className={`${alexBrush.className} relative -top-3 sm:-top-3 md:-top-4`}
               >
                 C
-              </span>
-              <span className="mx-1">&</span>
-              <span
+              </div>
+              <div className="mx-1">&</div>
+              <div
                 className={`${alexBrush.className} relative top-10 sm:top-12 md:top-16 lg:top-20`}
               >
                 R
-              </span>
+              </div>
             </h1>
-          </AnimatedText>
+          </div>
 
           {/* Button Buka Undangan */}
           <AnimatedText
