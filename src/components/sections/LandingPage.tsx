@@ -286,17 +286,20 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       </div>
 
       {/* C&R Text with Button */}
-      <div className="absolute inset-0 flex items-center justify-center z-20 px-4">
-        <div className="text-center flex flex-col items-center justify-center w-full max-w-md md:max-w-none">
+      <div className="absolute inset-0 flex items-center justify-center z-20 px-4 overflow-visible">
+        <div className="text-center flex flex-col items-center justify-center w-full max-w-md md:max-w-none overflow-visible">
           <AnimatedText
             animationType="fadeIn"
             delay={0.2}
             duration={1.2}
-            className="mb-6 md:mb-10"
+            className="mb-6 md:mb-10 overflow-visible"
           >
             <h2
-              className="text-3xl md:text-4xl font-normal text-[#504B38] tracking-wide"
-              style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              className="text-3xl md:text-4xl font-normal text-[#504B38] tracking-wide leading-[1.25] pt-[0.15em] overflow-visible [backface-visibility:hidden] [transform:translateZ(0)]"
+              style={{
+                fontFamily: '"Times New Roman", Times, serif',
+                WebkitFontSmoothing: "antialiased",
+              }}
             >
               The Wedding Of
             </h2>
@@ -306,33 +309,38 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             animationType="scale"
             delay={0.8}
             duration={1.5}
-            className="mb-8 md:mb-12"
+            className="mb-8 md:mb-12 overflow-visible"
           >
             <h1
-              className="text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-bold text-[#504B38] drop-shadow-lg tracking-tight flex items-center justify-center"
-              style={{ fontFamily: "Kunstler, serif" }}
+              className="text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-bold text-[#504B38] drop-shadow-lg tracking-tight flex items-center justify-center leading-[0.95] pt-[0.2em] overflow-visible [backface-visibility:hidden] [transform:translateZ(0)]"
+              style={{
+                fontFamily: "Kunstler, serif",
+                WebkitFontSmoothing: "antialiased",
+              }}
             >
               <AnimatedText
                 animationType="slideLeft"
                 delay={1.2}
                 duration={1.0}
-                className={`${alexBrush.className} relative -top-3 sm:-top-3 md:-top-4`}
+                className={`${alexBrush.className} overflow-visible -translate-y-1 sm:-translate-y-1 md:-translate-y-2`}
               >
                 C
               </AnimatedText>
+
               <AnimatedText
                 animationType="bounce"
                 delay={1.4}
                 duration={0.8}
-                className="mx-1"
+                className="mx-1 overflow-visible"
               >
                 &
               </AnimatedText>
+
               <AnimatedText
                 animationType="slideLeft"
                 delay={1.6}
                 duration={1.0}
-                className={`${alexBrush.className} relative top-10 sm:top-12 md:top-16 lg:top-20`}
+                className={`${alexBrush.className} overflow-visible translate-y-10 sm:translate-y-12 md:translate-y-16 lg:translate-y-20`}
               >
                 R
               </AnimatedText>
@@ -344,13 +352,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             animationType="slideUp"
             delay={2.0}
             duration={1.0}
-            className="mt-6 md:mt-10"
+            className="mt-6 md:mt-10 overflow-visible"
           >
             <Button
               onClick={() => {
-                // Trigger existing flow
                 onOpenInvitation();
-                // Dispatch a custom event to start music (counts as user gesture)
                 if (typeof window !== "undefined") {
                   window.dispatchEvent(new Event("play-music"));
                 }
@@ -367,7 +373,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       </div>
 
       {/* Floating Flowers in middle area */}
-      {/* <div className="absolute inset-0 z-[15] pointer-events-none">
+      <div className="absolute inset-0 z-[15] pointer-events-none">
         <AnimatedFlower
           src="/bunga/bunga-aksesoris-5.png"
           alt="Floating Flower 1"
@@ -408,7 +414,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           duration={3.1}
           className="absolute right-[22%] bottom-[30%] opacity-70"
         />
-      </div> */}
+      </div>
     </div>
   );
 };
