@@ -329,7 +329,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 &
               </AnimatedText>
               <AnimatedText
-                animationType="slideLeft  "
+                animationType="slideLeft"
                 delay={1.6}
                 duration={1.0}
                 className={`${alexBrush.className} relative top-10 sm:top-12 md:top-16 lg:top-20`}
