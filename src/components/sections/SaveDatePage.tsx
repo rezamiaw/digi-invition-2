@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { AnimatedButterfly } from "../ui/AnimatedButterfly";
 import { AnimatedText } from "@/components/ui/AnimatedText";
@@ -11,6 +11,38 @@ interface SaveDatePageProps {
 }
 
 export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
+  const [countdown, setCountdown] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const weddingDate = new Date("2025-11-15T13:00:00").getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        setCountdown({ days, hours, minutes, seconds });
+      } else {
+        // Wedding day has arrived
+        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   if (!isVisible) return null;
 
   return (
@@ -180,10 +212,10 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
         >
           <div className="grid grid-cols-4 gap-6 max-w-xs mx-auto">
             {[
-              { label: "HARI" },
-              { label: "JAM" },
-              { label: "MENIT" },
-              { label: "DETIK" },
+              { label: "HARI", value: countdown.days },
+              { label: "JAM", value: countdown.hours },
+              { label: "MENIT", value: countdown.minutes },
+              { label: "DETIK", value: countdown.seconds },
             ].map((item, idx) => (
               <div key={idx} className="text-center">
                 <AnimatedText
@@ -192,7 +224,7 @@ export const SaveDatePage: React.FC<SaveDatePageProps> = ({ isVisible }) => {
                   duration={0.8}
                   className="text-3xl md:text-4xl"
                 >
-                  <div>0</div>
+                  <div>{item.value}</div>
                 </AnimatedText>
                 <AnimatedText
                   animationType="fadeIn"

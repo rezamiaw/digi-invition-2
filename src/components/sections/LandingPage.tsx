@@ -39,17 +39,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({
         />
       </div>
 
-      {/* Bottom Decorative Overlay */}
-      <div className="absolute inset-x-0 bottom-0 h-[190px] z-5 pointer-events-none scale-x-110 opacity-50">
-        <Image
-          src="/reactangle-min.png"
-          alt="Bottom Decorative Leaves"
-          fill
-          className="object-cover object-bottom"
-          priority
-        />
-      </div>
-
       {/* Top Flowers with animations */}
       <div className="absolute inset-x-0 top-0 h-[190px] z-[11] pointer-events-none">
         <Image
@@ -83,6 +72,17 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           height={28}
           className="absolute right-[25%] top-8 animate-pulse"
           style={{ animationDelay: "0.4s", animationDuration: "2.8s" }}
+        />
+      </div>
+
+      {/* Bottom Decorative Overlay (show bottom part only) */}
+      <div className="absolute inset-x-0 bottom-0 h-[190px] z-[5] pointer-events-none scale-x-110 opacity-50">
+        <Image
+          src="/reactangle-min.png"
+          alt="Bottom Decorative Leaves"
+          fill
+          className="object-cover object-bottom"
+          priority
         />
       </div>
 
@@ -121,7 +121,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             alt="Flower acc center"
             width={44}
             height={44}
-            className="absolute left-1/2 -translate-x-1/2 bottom-12 animate-bounce"
+            className="absolute left-1/2 -translate-x-1/2 bottom-12 animate-pulse"
             style={{ animationDelay: "0.5s", animationDuration: "2.5s" }}
           />
           <Image
@@ -129,7 +129,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             alt="Flower acc 5"
             width={36}
             height={36}
-            className="absolute left-[45%] bottom-8 rotate-6 animate-pulse"
+            className="absolute left-[45%] bottom-8 rotate-6 animate-bounce"
             style={{ animationDelay: "1.5s", animationDuration: "3.2s" }}
           />
           <Image
@@ -137,7 +137,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             alt="Flower acc 6"
             width={36}
             height={36}
-            className="absolute left-[55%] bottom-6 -rotate-6 animate-bounce"
+            className="absolute left-[55%] bottom-6 -rotate-6 animate-pulse"
             style={{ animationDelay: "0.9s", animationDuration: "4.5s" }}
           />
 
@@ -147,7 +147,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             alt="Flower acc 7"
             width={56}
             height={56}
-            className="absolute right-14 bottom-14 animate-pulse"
+            className="absolute right-14 bottom-14 animate-bounce"
             style={{ animationDelay: "0.3s", animationDuration: "5.8s" }}
           />
           <Image
@@ -155,7 +155,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             alt="Flower acc 8"
             width={46}
             height={46}
-            className="absolute right-8 bottom-8 animate-bounce"
+            className="absolute right-8 bottom-8 animate-pulse"
             style={{ animationDelay: "1.1s", animationDuration: "3.6s" }}
           />
           <Image
@@ -163,7 +163,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             alt="Flower acc 9"
             width={38}
             height={38}
-            className="absolute right-[22%] bottom-10 animate-pulse"
+            className="absolute right-[22%] bottom-10 animate-bounce"
             style={{ animationDelay: "0.7s", animationDuration: "2.8s" }}
           />
         </div>
@@ -176,7 +176,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           alt="Bunga Putih"
           width={90}
           height={90}
-          className="animate-bounce"
+          className="animate-pulse"
           style={{ animationDelay: "0.4s", animationDuration: "6.2s" }}
         />
       </div>
@@ -188,7 +188,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           alt="Bunga Kuning"
           width={80}
           height={80}
-          className="animate-pulse"
+          className="animate-bounce"
           style={{ animationDelay: "0.6s", animationDuration: "4.8s" }}
         />
       </div>
@@ -200,7 +200,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           alt="Floating Flower 1"
           width={45}
           height={45}
-          className="absolute left-[15%] top-[35%] opacity-70 animate-bounce"
+          className="absolute left-[15%] top-[35%] opacity-70 animate-pulse"
           style={{ animationDelay: "0.3s", animationDuration: "6.5s" }}
         />
         <Image
@@ -208,7 +208,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           alt="Floating Flower 2"
           width={38}
           height={38}
-          className="absolute right-[18%] top-[40%] opacity-75 animate-pulse"
+          className="absolute right-[18%] top-[40%] opacity-75 animate-bounce"
           style={{ animationDelay: "1.1s", animationDuration: "4.2s" }}
         />
         <Image
@@ -216,7 +216,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           alt="Floating Flower 3"
           width={42}
           height={42}
-          className="absolute left-[20%] bottom-[35%] opacity-65 animate-bounce"
+          className="absolute left-[20%] bottom-[35%] opacity-65 animate-pulse"
           style={{ animationDelay: "0.7s", animationDuration: "5.8s" }}
         />
         <Image
@@ -224,7 +224,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           alt="Floating Flower 4"
           width={35}
           height={35}
-          className="absolute right-[22%] bottom-[30%] opacity-70 animate-pulse"
+          className="absolute right-[22%] bottom-[30%] opacity-70 animate-bounce"
           style={{ animationDelay: "1.4s", animationDuration: "3.1s" }}
         />
       </div>
