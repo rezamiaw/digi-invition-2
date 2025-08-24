@@ -232,17 +232,17 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       {/* C&R Text */}
       <div className="absolute inset-0 flex items-center justify-center z-20 px-4">
         <div className="text-center flex flex-col items-center justify-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#504B38] tracking-wide mb-14 sm:mb-6 md:mb-8 lg:mb-10">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#504B38] tracking-wide mb-14 sm:mb-6 md:mb-8 lg:mb-15">
             THE WEDDING OF
           </h2>
-          <h1 className="text-8xl sm:text-9xl md:text-9xl lg:text-9xl xl:text-9xl font-bold text-[#504B38] drop-shadow-lg tracking-tight flex items-center justify-center">
+          <h1 className="text-7xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl font-bold text-[#504B38] drop-shadow-lg flex items-center justify-center">
             <span
               className={`${alexBrush.className} relative -top-12 sm:-top-2 md:-top-4 lg:-top-8 xl:-top-12`}
             >
               C
             </span>
             <span
-              className={`${alexBrush.className} mx-1 ml-4 sm:ml-6 md:ml-8 lg:ml-10`}
+              className={`${alexBrush.className} mx-1 ml-0 sm:ml-3 md:ml-4 lg:ml-2`}
             >
               &
             </span>
