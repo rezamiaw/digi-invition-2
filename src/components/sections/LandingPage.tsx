@@ -329,7 +329,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 &
               </AnimatedText>
               <AnimatedText
-                animationType="slideRight"
+                animationType="slideLeft  "
                 delay={1.6}
                 duration={1.0}
                 className={`${alexBrush.className} relative top-10 sm:top-12 md:top-16 lg:top-20`}
@@ -367,7 +367,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       </div>
 
       {/* Floating Flowers in middle area */}
-      <div className="absolute inset-0 z-[15] pointer-events-none">
+      {/* <div className="absolute inset-0 z-[15] pointer-events-none">
         <AnimatedFlower
           src="/bunga/bunga-aksesoris-5.png"
           alt="Floating Flower 1"
@@ -408,7 +408,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           duration={3.1}
           className="absolute right-[22%] bottom-[30%] opacity-70"
         />
-      </div>
+      </div> */}
     </div>
   );
 };
