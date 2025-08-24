@@ -235,7 +235,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#504B38] tracking-wide mb-14 sm:mb-6 md:mb-8 lg:mb-15">
             THE WEDDING OF
           </h2>
-          <h1 className="text-7xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl font-bold text-[#504B38] drop-shadow-lg flex items-center justify-center">
+          <h1 className="text-7xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl font-bold text-[#504B38] flex items-center justify-center">
             <span
               className={`${alexBrush.className} relative -top-12 sm:-top-2 md:-top-4 lg:-top-8 xl:-top-12`}
             >
@@ -252,33 +252,39 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               R
             </span>
           </h1>
-        </div>
-      </div>
 
-      {/* Button Open Invitation - Positioned below */}
-      <div className="absolute bottom-40 sm:bottom-24 md:bottom-32 lg:bottom-40 left-1/2 transform -translate-x-1/2 z-20">
-        <button
-          onClick={onOpenInvitation}
-          className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-[#504B38] text-[#504B38] text-sm sm:text-base md:text-lg font-semibold hover:bg-[#504B38] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-2 sm:gap-3"
-        >
-          <svg
-            className="w-5 h-5 sm:w-6 sm:h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            />
-          </svg>
-          <span className="text-xs sm:text-sm md:text-base">
-            Open Invitation
-          </span>
-        </button>
+          {/* Button Open Invitation - Positioned below C&R */}
+          <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-16">
+            <button
+              onClick={() => {
+                onOpenInvitation();
+                // Dispatch custom event to start music playback
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new Event("play-music"));
+                }
+              }}
+              className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-[#504B38] text-[#504B38] text-sm sm:text-base md:text-lg font-semibold hover:bg-[#504B38] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-2 sm:gap-3"
+            >
+              <svg
+                className="w-5 h-5 sm:w-6 sm:h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <span className="text-xs sm:text-sm md:text-base">
+                Open Invitation
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
